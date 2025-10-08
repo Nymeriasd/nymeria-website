@@ -16,20 +16,20 @@ export default function Home() {
               <Badge className="bg-amber-500 text-black">شريكك التقني</Badge>
             </div>
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
-              بنبني. نطلق. نكبر مع نيميريا
+              نبني. نطلق. ننمو مع نيميريا
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              بنصمم ونطوّر أنظمة ERP قوية، مواقع وتطبيقات ويب وموبايل، ومع استشارات مستمرة تساعدك تكبر عملك.
+              نصمم ونطوّر أنظمة ERP قوية، مواقع وتطبيقات ويب وموبايل، مع استشارات مستمرة لنمو أعمالك.
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <Button className="gap-2" dir="rtl">
-                أبدأ مشروعك <IconArrowLeft className="h-4 w-4" />
+                ابدأ مشروعك <IconArrowLeft className="h-4 w-4" />
               </Button>
               <Button asChild variant="outline">
-                <a href="#services">شوف خدماتنا</a>
+                <a href="#services">اطلع على خدماتنا</a>
               </Button>
               <Button asChild variant="outline">
-                <a href="/survey">شارك الاستبيان</a>
+                <a href="/survey">شارك في الاستبيان</a>
               </Button>
             </div>
           </div>
@@ -39,16 +39,16 @@ export default function Home() {
       {/* Services */}
       <section id="services" className="container mx-auto px-6 py-16 md:py-24">
         <div className="mx-auto max-w-2xl text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">بنقدم شنو</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">ماذا نقدم</h2>
           <p className="mt-3 text-muted-foreground">
-            <span dir="rtl">حلول عملية من الفكرة للتنفيذ </span>
+            <span dir="rtl">حلول عملية من الفكرة إلى التنفيذ</span>
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           <Card className="rounded-2xl border border-black/5 dark:border-white/10 bg-card shadow-sm transition hover:shadow-md hover:-translate-y-0.5 overflow-hidden min-h-[200px]">
             <div className="p-4 flex h-full flex-col">
               <h3 className="text-lg font-semibold">أنظمة ERP</h3>
-              <p className="mt-2 text-sm text-muted-foreground">ERP حسب شغلك عشان يسهّل العمليات.</p>
+              <p className="mt-2 text-sm text-muted-foreground">نظام ERP مخصص لتسهيل العمليات التشغيلية.</p>
               <p className="mt-1 text-sm text-muted-foreground">أتمتة وتقارير • صلاحيات وتكاملات</p>
             </div>
           </Card>
@@ -61,9 +61,9 @@ export default function Home() {
           </Card>
           <Card className="rounded-2xl border border-black/5 dark:border-white/10 bg-card shadow-sm transition hover:shadow-md hover:-translate-y-0.5 overflow-hidden min-h-[200px]">
             <div className="p-4 flex h-full flex-col">
-              <h3 className="text-lg font-semibold">تطبيقات موبايل</h3>
-              <p className="mt-2 text-sm text-muted-foreground">iOS وAndroid بأداء قريب من النيتف.</p>
-              <p className="mt-1 text-sm text-muted-foreground">متعدد المنصات • أوفلاين + إشعارات</p>
+              <h3 className="text-lg font-semibold">تطبيقات الجوال</h3>
+              <p className="mt-2 text-sm text-muted-foreground">تطبيقات iOS و Android بأداء عالي الجودة.</p>
+              <p className="mt-1 text-sm text-muted-foreground">متعدد المنصات • دعم غير متصل + إشعارات</p>
             </div>
           </Card>
           <Card className="rounded-2xl border border-black/5 dark:border-white/10 bg-card shadow-sm transition hover:shadow-md hover:-translate-y-0.5 overflow-hidden min-h-[200px]">
@@ -93,9 +93,9 @@ export default function Home() {
       {/* CTA */}
       <section className="border-y bg-secondary/50">
         <div className="container mx-auto px-6 py-14 flex flex-col items-center text-center gap-4">
-          <h3 className="text-2xl md:text-3xl font-semibold">جاهز نبدأ؟</h3>
-          <p className="text-muted-foreground max-w-2xl">أرسل لينا فكرتك ونرجع ليك بخطة، زمن، وتكلفة.</p>
-          <Button className="gap-2" dir="rtl">عرض تقديري مجاني <IconArrowLeft className="h-4 w-4" /></Button>
+          <h3 className="text-2xl md:text-3xl font-semibold">هل أنت جاهز للبدء؟</h3>
+          <p className="text-muted-foreground max-w-2xl">أرسل لنا فكرتك وسنعود إليك بخطة وجدول زمني وتكلفة.</p>
+          <Button className="gap-2" dir="rtl">احصل على عرض مجاني <IconArrowLeft className="h-4 w-4" /></Button>
         </div>
       </section>
 
@@ -104,10 +104,10 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <h4 className="text-2xl font-semibold">تواصل معنا</h4>
-            <p className="mt-2 text-muted-foreground">أكتب لينا شوية تفاصيل ونرجع ليك سريع.</p>
+            <p className="mt-2 text-muted-foreground">شاركنا بعض التفاصيل وسنعود إليك قريباً.</p>
             <div className="mt-6">
               <div className="flex items-center gap-3">
-                <span className="text-sm text-muted-foreground">نيميريا • بنصنع برمجيات موثوقة</span>
+                <span className="text-sm text-muted-foreground">نيميريا • نصنع برمجيات موثوقة</span>
               </div>
             </div>
           </div>
@@ -121,11 +121,11 @@ export default function Home() {
                   email: "الإيميل",
                   emailPlaceholder: "you@company.com",
                   message: "نبذة عن المشروع",
-                  messagePlaceholder: "أكتب لينا عن الـ ERP أو الموقع أو التطبيق أو الدعم العمل دايرو",
+                  messagePlaceholder: "أخبرنا عن نظام ERP أو الموقع أو التطبيق أو الدعم الذي تحتاجه",
                   submit: "أرسل الرسالة",
                   successTitle: "تم الإرسال!",
-                  successMessage: "شكراً، رسالتك وصلتنا وبنرجع ليك قريب.",
-                  errorTitle: "في مشكلة!",
+                  successMessage: "شكراً، وصلتنا رسالتك وسنعود إليك قريباً.",
+                  errorTitle: "حدث خطأ!",
                 }}
               />
             </CardContent>
