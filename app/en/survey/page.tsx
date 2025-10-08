@@ -23,10 +23,10 @@ export default function SurveyPageEn() {
               The world changed fast — technology is now core to every business.
             </p>
             <p>
-              We're back with fresh experience to help you rebuild from scratch, or take your idea to launch.
+              We&apos;re back with fresh experience to help you rebuild from scratch, or take your idea to launch.
             </p>
             <p className="font-medium text-foreground">
-              Fill your details below 👇 and we'll provide a free consultation and a plan to move forward stronger.
+              Fill your details below 👇 and we&apos;ll provide a free consultation and a plan to move forward stronger.
             </p>
           </div>
         </div>
