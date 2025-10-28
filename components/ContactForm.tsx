@@ -25,12 +25,29 @@ interface ContactFormProps {
 
 export function ContactForm({ labels, isRtl = false }: ContactFormProps) {
   const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = React.useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
     const form = e.currentTarget;
     const formData = new FormData(form);
+    
+    // Client-side validation
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+    
+    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+      setStatus("error");
+      setErrorMessage("يرجى ملء جميع الحقول المطلوبة");
+      setTimeout(() => {
+        setStatus("idle");
+        setErrorMessage("");
+      }, 3000);
+      return;
+    }
 
     try {
       const response = await fetch("/api/contact", {
@@ -41,15 +58,24 @@ export function ContactForm({ labels, isRtl = false }: ContactFormProps) {
 
       if (result.ok) {
         setStatus("success");
+        setErrorMessage("");
         form.reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
+        setErrorMessage(result.error || "حدث خطأ غير متوقع");
+        setTimeout(() => {
+          setStatus("idle");
+          setErrorMessage("");
+        }, 5000);
       }
     } catch {
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
+      setErrorMessage("حدث خطأ في الاتصال");
+      setTimeout(() => {
+        setStatus("idle");
+        setErrorMessage("");
+      }, 5000);
     }
   }
 
@@ -64,7 +90,9 @@ export function ContactForm({ labels, isRtl = false }: ContactFormProps) {
       {status === "error" && (
         <Alert variant="destructive" className="mb-4">
           <AlertTitle>{labels.errorTitle}</AlertTitle>
-          <AlertDescription>حاول مرة تانية أو تواصل معنا مباشرة.</AlertDescription>
+          <AlertDescription>
+            {errorMessage || "حاول مرة تانية أو تواصل معنا مباشرة."}
+          </AlertDescription>
         </Alert>
       )}
       <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -98,6 +126,7 @@ export function ContactForm({ labels, isRtl = false }: ContactFormProps) {
             name="message"
             placeholder={labels.messagePlaceholder}
             rows={5}
+            required
             dir={isRtl ? "rtl" : undefined}
             className={isRtl ? "text-right" : undefined}
           />

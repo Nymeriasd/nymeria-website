@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+SENDGRID_API_KEY=your_sendgrid_api_key_here
+CONTACT_TO_EMAIL=your_email@example.com
+```
+
+- `SENDGRID_API_KEY`: Your SendGrid API key for sending emails
+- `CONTACT_TO_EMAIL`: The email address where contact form submissions and survey responses will be sent
+
 ## Getting Started
 
 First, run the development server:
